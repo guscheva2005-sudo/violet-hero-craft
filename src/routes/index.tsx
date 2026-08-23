@@ -2,14 +2,18 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowUpRight,
   BarChart3,
+  Bot,
   Brain,
   Code2,
   GraduationCap,
   Layers3,
   LineChart,
   MousePointer2,
+  Palette,
+  Puzzle,
   Rocket,
   Sparkles,
+  Timer,
   Zap,
 } from "lucide-react";
 
