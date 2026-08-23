@@ -294,7 +294,7 @@ function Index() {
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 lg:gap-5">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4 lg:gap-5">
           {services.map(({ id, title, description, result, icon: Icon }) => (
             <article
               key={id}
