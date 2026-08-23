@@ -233,3 +233,20 @@
     linear-gradient(135deg, color-mix(in oklab, var(--primary) 22%, transparent), color-mix(in oklab, var(--accent) 16%, transparent)),
     color-mix(in oklab, var(--card) 92%, transparent);
 }
+
+.service-card {
+  background:
+    linear-gradient(145deg, color-mix(in oklab, var(--card) 96%, transparent), color-mix(in oklab, var(--background) 60%, transparent));
+  border: 1px solid var(--border);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .service-card {
+    transition: transform 220ms ease, border-color 220ms ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--ring);
+  }
+}
