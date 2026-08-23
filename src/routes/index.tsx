@@ -102,6 +102,29 @@ const services = [
   },
 ];
 
+const processSteps = [
+  {
+    id: "discover",
+    title: "Погружаюсь в задачу",
+    description: "Разбираю бизнес-цели, аудиторию и ограничения — чтобы решение работало на результат, а не просто выглядело красиво.",
+  },
+  {
+    id: "create",
+    title: "Создаю с ИИ",
+    description: "Генерирую концепции, код и контент с помощью LLM и автоматизации, ускоряя каждый этап в 2–3 раза.",
+  },
+  {
+    id: "test",
+    title: "Тестирую и улучшаю",
+    description: "Проверяю интерфейсы, производительность и логику, довожу детали до состояния, которым приятно пользоваться.",
+  },
+  {
+    id: "launch",
+    title: "Запускаю и масштабирую",
+    description: "Выкатываю продукт, настраиваю аналитику и интеграции, помогаю расти дальше без лишней ручной работы.",
+  },
+];
+
 function Index() {
   return (
     <main className="min-h-screen overflow-hidden bg-background px-4 py-5 text-foreground sm:px-7 sm:py-7 lg:px-10 lg:py-8">
@@ -317,6 +340,41 @@ function Index() {
             </article>
           ))}
         </div>
+      </section>
+
+      <section
+        id="process"
+        aria-labelledby="process-title"
+        className="relative mx-auto mt-6 max-w-[1440px] border border-border bg-card p-5 sm:p-7 lg:mt-8 lg:p-10"
+      >
+        <div className="mb-8 flex flex-col gap-2 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-lg font-medium uppercase text-primary">How I work</p>
+            <h2
+              id="process-title"
+              className="font-display text-4xl font-black uppercase leading-[0.9] text-foreground sm:text-5xl lg:text-6xl"
+            >
+              Как я<br className="sm:hidden" /> работаю
+            </h2>
+          </div>
+          <p className="max-w-md text-lg text-muted-foreground">
+            Чёткий процесс от задачи до масштаба — быстро, прозрачно, с фокусом на результат.
+          </p>
+        </div>
+
+        <ol className="process-timeline">
+          {processSteps.map(({ id, title, description }, index) => (
+            <li key={id} className="process-step">
+              <span className="process-number">0{index + 1}</span>
+              <h3 className="font-display text-2xl font-black uppercase leading-none text-foreground sm:text-3xl">
+                {title}
+              </h3>
+              <p className="mt-3 text-lg leading-snug text-muted-foreground">
+                {description}
+              </p>
+            </li>
+          ))}
+        </ol>
       </section>
     </main>
   );
