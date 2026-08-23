@@ -303,7 +303,7 @@ function Index() {
               <div className="mb-5 flex size-12 items-center justify-center border border-border bg-background/80 text-primary">
                 <Icon className="size-6" aria-hidden="true" />
               </div>
-              <h3 className="font-display text-2xl font-black uppercase leading-none text-foreground sm:text-3xl">
+              <h3 className="font-display text-2xl font-black uppercase leading-none text-foreground break-words">
                 {title}
               </h3>
               <p className="mt-3 text-lg leading-snug text-muted-foreground">
