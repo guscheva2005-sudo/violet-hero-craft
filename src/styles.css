@@ -210,3 +210,26 @@
   0%, 100% { transform: translateY(0) rotate(6deg); }
   50% { transform: translateY(-8px) rotate(3deg); }
 }
+
+.project-card {
+  background:
+    linear-gradient(145deg, color-mix(in oklab, var(--card) 96%, transparent), color-mix(in oklab, var(--background) 60%, transparent));
+  border: 1px solid var(--border);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-card {
+    transition: transform 220ms ease, border-color 220ms ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--ring);
+  }
+}
+
+.project-preview {
+  background:
+    linear-gradient(135deg, color-mix(in oklab, var(--primary) 22%, transparent), color-mix(in oklab, var(--accent) 16%, transparent)),
+    color-mix(in oklab, var(--card) 92%, transparent);
+}
