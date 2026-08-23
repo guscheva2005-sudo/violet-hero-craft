@@ -1,9 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowUpRight,
+  BarChart3,
+  Brain,
   Code2,
+  GraduationCap,
   Layers3,
+  LineChart,
   MousePointer2,
+  Rocket,
   Sparkles,
   Zap,
 } from "lucide-react";
@@ -36,6 +41,30 @@ const capabilities = [
   { label: "Дизайн", icon: Layers3 },
   { label: "Разработка", icon: Code2 },
   { label: "Запуск", icon: Zap },
+];
+
+const projects = [
+  {
+    id: "studyflow",
+    title: "StudyFlow",
+    description: "AI-платформа, которая строит персональные учебные траектории и помогает осваивать сложные темы быстрее.",
+    tags: ["React", "TypeScript", "AI/ML", "Tailwind"],
+    icon: GraduationCap,
+  },
+  {
+    id: "neuroanalytics",
+    title: "НейроАналитик",
+    description: "AI-сервис для анализа данных: автоматическая обработка отчётов, прогнозы и визуализация инсайтов.",
+    tags: ["Python", "FastAPI", "LLM", "PostgreSQL"],
+    icon: LineChart,
+  },
+  {
+    id: "launchpro",
+    title: "LaunchPro",
+    description: "Лендинг для продукта, заточенный под конверсию: чистая типографика, Motion и быстрый рендер.",
+    tags: ["Next.js", "Figma", "Vercel", "Motion"],
+    icon: Rocket,
+  },
 ];
 
 function Index() {
@@ -95,7 +124,7 @@ function Index() {
                 size="lg"
                 className="mt-5 h-12 rounded-full px-6 text-lg shadow-none"
               >
-                <a href="#works">
+                <a href="#featured-projects">
                   Смотреть работы <ArrowUpRight className="size-5" />
                 </a>
               </Button>
@@ -153,6 +182,61 @@ function Index() {
         <p className="edge-label edge-label-right absolute right-1 top-1/2 hidden text-lg uppercase text-muted-foreground xl:block">
           Портфолио
         </p>
+      </section>
+
+      <section
+        id="featured-projects"
+        aria-labelledby="featured-title"
+        className="relative mx-auto mt-6 max-w-[1440px] border border-border bg-card p-5 sm:p-7 lg:mt-8 lg:p-10"
+      >
+        <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-lg font-medium uppercase text-primary">Selected work</p>
+            <h2
+              id="featured-title"
+              className="font-display text-4xl font-black uppercase leading-[0.9] text-foreground sm:text-5xl lg:text-6xl"
+            >
+              Избранные<br className="sm:hidden" /> проекты
+            </h2>
+          </div>
+          <p className="max-w-md text-lg text-muted-foreground">
+            Три кейса, в которых дизайн, код и AI работают на результат.
+          </p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+          {projects.map(({ id, title, description, tags, icon: Icon }) => (
+            <article
+              key={id}
+              className="project-card group flex flex-col overflow-hidden rounded-xl"
+            >
+              <div className="project-preview relative flex aspect-[16/10] items-center justify-center overflow-hidden border-b border-border">
+                <div className="absolute inset-0 opacity-40 mix-blend-overlay" aria-hidden="true">
+                  <div className="hero-grid absolute inset-0 opacity-60" />
+                </div>
+                <Icon className="relative z-10 size-14 text-primary drop-shadow-lg transition-transform duration-300 group-hover:scale-110" aria-hidden="true" />
+              </div>
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
+                <h3 className="font-display text-2xl font-black uppercase leading-none text-foreground sm:text-3xl">
+                  {title}
+                </h3>
+                <p className="mt-3 text-lg leading-snug text-muted-foreground">
+                  {description}
+                </p>
+                <div className="mt-auto flex flex-wrap gap-2 pt-5">
+                  {tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="inline-flex items-center rounded-full border border-border bg-background/80 px-3 py-1 text-base font-medium text-foreground"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
     </main>
   );
