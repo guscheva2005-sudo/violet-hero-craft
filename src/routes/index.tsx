@@ -43,7 +43,7 @@ function Index() {
     <main className="min-h-screen overflow-hidden bg-background px-4 py-5 text-foreground sm:px-7 sm:py-7 lg:px-10 lg:py-8">
       <section
         aria-labelledby="hero-title"
-        className="hero-shell relative mx-auto min-h-[calc(100vh-2.5rem)] max-w-[1440px] overflow-hidden border border-border bg-card p-3 shadow-2xl sm:min-h-[calc(100vh-3.5rem)] sm:p-5 lg:p-7"
+        className="hero-shell relative mx-auto max-w-[1440px] overflow-hidden border border-border bg-card p-3 shadow-2xl sm:p-5 lg:p-7"
       >
         <div className="hero-grid absolute inset-0 opacity-30" aria-hidden="true" />
 
