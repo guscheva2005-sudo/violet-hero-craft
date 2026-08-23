@@ -273,6 +273,51 @@ function Index() {
           ))}
         </div>
       </section>
+
+      <section
+        id="services"
+        aria-labelledby="services-title"
+        className="relative mx-auto mt-6 max-w-[1440px] border border-border bg-card p-5 sm:p-7 lg:mt-8 lg:p-10"
+      >
+        <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-lg font-medium uppercase text-primary">What I do</p>
+            <h2
+              id="services-title"
+              className="font-display text-4xl font-black uppercase leading-[0.9] text-foreground sm:text-5xl lg:text-6xl"
+            >
+              Что я<br className="sm:hidden" /> делаю
+            </h2>
+          </div>
+          <p className="max-w-md text-lg text-muted-foreground">
+            Четыре направления, в которых превращаю задачи бизнеса в работающие цифровые решения.
+          </p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+          {services.map(({ id, title, description, result, icon: Icon }) => (
+            <article
+              key={id}
+              className="service-card group flex flex-col p-5 sm:p-6"
+            >
+              <div className="mb-5 flex size-12 items-center justify-center border border-border bg-background/80 text-primary">
+                <Icon className="size-6" aria-hidden="true" />
+              </div>
+              <h3 className="font-display text-2xl font-black uppercase leading-none text-foreground sm:text-3xl">
+                {title}
+              </h3>
+              <p className="mt-3 text-lg leading-snug text-muted-foreground">
+                {description}
+              </p>
+              <div className="mt-auto border-t border-border pt-4">
+                <p className="text-lg font-semibold text-foreground">
+                  {result}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
