@@ -247,7 +247,7 @@ function Index() {
       >
         <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-lg font-medium uppercase text-primary">Selected work</p>
+            <p className="text-lg font-medium uppercase text-primary">Проекты</p>
             <h2
               id="featured-title"
               className="font-display text-4xl font-black uppercase leading-[0.9] text-foreground sm:text-5xl lg:text-6xl"
