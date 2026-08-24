@@ -374,6 +374,42 @@ function Index() {
           ))}
         </ol>
       </section>
+
+      <section
+        id="contact"
+        aria-labelledby="contact-title"
+        className="relative mx-auto mt-6 max-w-[1440px] border border-border bg-card p-6 text-center sm:p-10 lg:mt-8 lg:p-14"
+      >
+        <p className="text-lg font-medium uppercase text-primary">Контакты</p>
+        <h2
+          id="contact-title"
+          className="mx-auto mt-2 max-w-3xl font-display text-4xl font-black uppercase leading-[0.9] text-foreground sm:text-5xl lg:text-6xl"
+        >
+          Обсудим<br className="sm:hidden" /> ваш проект
+        </h2>
+        <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
+          Напишите удобным способом — отвечу в течение дня и предложу план запуска.
+        </p>
+
+        <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <Button asChild size="lg" className="h-12 w-full rounded-full px-7 text-lg shadow-none sm:w-auto">
+            <a href="https://t.me/vibecoder" target="_blank" rel="noopener noreferrer">
+              <Send className="size-5" aria-hidden="true" /> Написать в Telegram
+            </a>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="h-12 w-full rounded-full px-7 text-lg shadow-none sm:w-auto"
+          >
+            <a href="mailto:hello@vibecoder.dev">
+              <Mail className="size-5" aria-hidden="true" /> Написать на Email
+            </a>
+          </Button>
+        </div>
+      </section>
     </main>
+
   );
 }
