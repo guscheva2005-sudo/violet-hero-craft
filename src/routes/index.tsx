@@ -8,10 +8,14 @@ import {
   GraduationCap,
   Layers3,
   LineChart,
+  Mail,
   MousePointer2,
+
   Palette,
   Puzzle,
   Rocket,
+  Send,
+
   Sparkles,
   Timer,
   Zap,
@@ -155,6 +159,19 @@ function Index() {
             Vibe
             <span className="block text-primary">Coder</span>
           </h1>
+
+          <p className="mx-auto mt-5 max-w-xl text-[20px] font-medium leading-[1.35] text-foreground sm:text-[22px]">
+            Собираю цифровые продукты с характером — от первой идеи до живого интерфейса.
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="mt-5 h-12 rounded-full px-6 text-lg shadow-none"
+          >
+            <a href="#featured-projects">
+              Смотреть работы <ArrowUpRight className="size-5" />
+            </a>
+          </Button>
         </div>
 
         <div id="top" className="relative z-10 mt-5 lg:mt-7">
@@ -172,22 +189,8 @@ function Index() {
               <span className="text-lg font-semibold">01 / Creative engineering</span>
               <MousePointer2 className="size-5 text-primary" aria-hidden="true" />
             </div>
-
-            <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 lg:w-[54%] lg:p-8">
-              <p className="max-w-xl text-[20px] font-medium leading-[1.35] text-foreground sm:text-[22px]">
-                Собираю цифровые продукты с характером — от первой идеи до живого интерфейса.
-              </p>
-              <Button
-                asChild
-                size="lg"
-                className="mt-5 h-12 rounded-full px-6 text-lg shadow-none"
-              >
-                <a href="#featured-projects">
-                  Смотреть работы <ArrowUpRight className="size-5" />
-                </a>
-              </Button>
-            </div>
           </div>
+
 
           <div className="hero-stamp absolute -right-2 -top-11 z-20 flex size-28 rotate-6 flex-col items-center justify-center rounded-full border-4 border-card bg-primary text-center text-primary-foreground shadow-xl sm:right-7 sm:-top-16 sm:size-36">
             <Sparkles className="mb-1 size-5" aria-hidden="true" />
@@ -213,8 +216,7 @@ function Index() {
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2">
-            <article className="project-tile project-tile-light flex min-h-44 flex-col justify-between border border-border p-5 sm:min-h-56 sm:p-6">
-              <span className="text-lg font-medium">Selected / 01</span>
+            <article className="project-tile project-tile-light flex min-h-44 flex-col justify-end border border-border p-5 sm:min-h-56 sm:p-6">
               <div>
                 <p className="text-lg text-muted-foreground">Продуктовый лендинг</p>
                 <h2 className="font-display text-3xl font-black uppercase leading-none sm:text-5xl">
@@ -222,8 +224,7 @@ function Index() {
                 </h2>
               </div>
             </article>
-            <article className="project-tile project-tile-violet flex min-h-44 flex-col justify-between border border-border p-5 text-primary-foreground sm:min-h-56 sm:p-6">
-              <span className="text-lg font-medium">Selected / 02</span>
+            <article className="project-tile project-tile-violet flex min-h-44 flex-col justify-end border border-border p-5 text-primary-foreground sm:min-h-56 sm:p-6">
               <div>
                 <p className="text-lg opacity-80">AI-сервис</p>
                 <h2 className="font-display text-3xl font-black uppercase leading-none sm:text-5xl">
@@ -232,6 +233,7 @@ function Index() {
               </div>
             </article>
           </div>
+
         </div>
 
         <p className="edge-label edge-label-left absolute left-1 top-1/2 hidden text-lg uppercase text-muted-foreground xl:block">
@@ -249,7 +251,7 @@ function Index() {
       >
         <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-lg font-medium uppercase text-primary">Selected work</p>
+            <p className="text-lg font-medium uppercase text-primary">Проекты</p>
             <h2
               id="featured-title"
               className="font-display text-4xl font-black uppercase leading-[0.9] text-foreground sm:text-5xl lg:text-6xl"
@@ -376,6 +378,42 @@ function Index() {
           ))}
         </ol>
       </section>
+
+      <section
+        id="contact"
+        aria-labelledby="contact-title"
+        className="relative mx-auto mt-6 max-w-[1440px] border border-border bg-card p-6 text-center sm:p-10 lg:mt-8 lg:p-14"
+      >
+        <p className="text-lg font-medium uppercase text-primary">Контакты</p>
+        <h2
+          id="contact-title"
+          className="mx-auto mt-2 max-w-3xl font-display text-4xl font-black uppercase leading-[0.9] text-foreground sm:text-5xl lg:text-6xl"
+        >
+          Обсудим<br className="sm:hidden" /> ваш проект
+        </h2>
+        <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
+          Напишите удобным способом — отвечу в течение дня и предложу план запуска.
+        </p>
+
+        <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <Button asChild size="lg" className="h-12 w-full rounded-full px-7 text-lg shadow-none sm:w-auto">
+            <a href="https://t.me/vibecoder" target="_blank" rel="noopener noreferrer">
+              <Send className="size-5" aria-hidden="true" /> Написать в Telegram
+            </a>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="h-12 w-full rounded-full px-7 text-lg shadow-none sm:w-auto"
+          >
+            <a href="mailto:hello@vibecoder.dev">
+              <Mail className="size-5" aria-hidden="true" /> Написать на Email
+            </a>
+          </Button>
+        </div>
+      </section>
     </main>
+
   );
 }
