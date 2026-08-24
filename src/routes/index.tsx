@@ -366,7 +366,7 @@ function Index() {
           {processSteps.map(({ id, title, description }, index) => (
             <li key={id} className="process-step">
               <span className="process-number">0{index + 1}</span>
-              <h3 className="font-display text-2xl font-black uppercase leading-none text-foreground sm:text-3xl">
+              <h3 className="font-display text-[clamp(1.25rem,2.2vw,1.75rem)] font-black uppercase leading-[0.95] text-foreground break-words">
                 {title}
               </h3>
               <p className="mt-3 text-lg leading-snug text-muted-foreground">
