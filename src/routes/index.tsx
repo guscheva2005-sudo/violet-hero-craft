@@ -155,6 +155,19 @@ function Index() {
             Vibe
             <span className="block text-primary">Coder</span>
           </h1>
+
+          <p className="mx-auto mt-5 max-w-xl text-[20px] font-medium leading-[1.35] text-foreground sm:text-[22px]">
+            Собираю цифровые продукты с характером — от первой идеи до живого интерфейса.
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="mt-5 h-12 rounded-full px-6 text-lg shadow-none"
+          >
+            <a href="#featured-projects">
+              Смотреть работы <ArrowUpRight className="size-5" />
+            </a>
+          </Button>
         </div>
 
         <div id="top" className="relative z-10 mt-5 lg:mt-7">
@@ -172,22 +185,8 @@ function Index() {
               <span className="text-lg font-semibold">01 / Creative engineering</span>
               <MousePointer2 className="size-5 text-primary" aria-hidden="true" />
             </div>
-
-            <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 lg:w-[54%] lg:p-8">
-              <p className="max-w-xl text-[20px] font-medium leading-[1.35] text-foreground sm:text-[22px]">
-                Собираю цифровые продукты с характером — от первой идеи до живого интерфейса.
-              </p>
-              <Button
-                asChild
-                size="lg"
-                className="mt-5 h-12 rounded-full px-6 text-lg shadow-none"
-              >
-                <a href="#featured-projects">
-                  Смотреть работы <ArrowUpRight className="size-5" />
-                </a>
-              </Button>
-            </div>
           </div>
+
 
           <div className="hero-stamp absolute -right-2 -top-11 z-20 flex size-28 rotate-6 flex-col items-center justify-center rounded-full border-4 border-card bg-primary text-center text-primary-foreground shadow-xl sm:right-7 sm:-top-16 sm:size-36">
             <Sparkles className="mb-1 size-5" aria-hidden="true" />
