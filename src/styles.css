@@ -339,3 +339,37 @@
     transform: translateX(-50%);
   }
 }
+
+/* Unified section shell: consistent alignment and depth */
+.section-shell {
+  border-radius: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    box-shadow: 0 24px 60px -32px color-mix(in oklab, var(--primary) 45%, transparent);
+  }
+
+  .project-card:hover,
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 26px 50px -28px color-mix(in oklab, var(--primary) 60%, transparent);
+  }
+
+  .project-card:hover .project-preview {
+    background:
+      linear-gradient(135deg, color-mix(in oklab, var(--primary) 34%, transparent), color-mix(in oklab, var(--accent) 24%, transparent)),
+      color-mix(in oklab, var(--card) 90%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-card,
+  .service-card {
+    transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
+  }
+
+  .project-preview {
+    transition: background 240ms ease;
+  }
+}
