@@ -131,10 +131,10 @@ const processSteps = [
 
 function Index() {
   return (
-    <main className="min-h-screen overflow-hidden bg-background px-4 py-5 text-foreground sm:px-7 sm:py-7 lg:px-10 lg:py-8">
+    <main className="min-h-screen overflow-hidden bg-background px-4 py-6 text-foreground sm:px-7 sm:py-8 lg:px-12 lg:py-12">
       <section
         aria-labelledby="hero-title"
-        className="hero-shell relative mx-auto max-w-[1440px] overflow-hidden border border-border bg-card p-3 shadow-2xl sm:p-5 lg:p-7"
+        className="hero-shell section-shell relative mx-auto max-w-[1600px] overflow-hidden border border-border bg-card p-3 shadow-2xl sm:p-5 lg:p-7"
       >
         <div className="hero-grid absolute inset-0 opacity-30" aria-hidden="true" />
 
@@ -166,7 +166,7 @@ function Index() {
           <Button
             asChild
             size="lg"
-            className="mt-5 h-12 rounded-full px-6 text-lg shadow-none"
+            className="mt-6 h-14 rounded-full px-8 text-xl shadow-none sm:h-13"
           >
             <a href="#featured-projects">
               Смотреть работы <ArrowUpRight className="size-5" />
@@ -175,7 +175,7 @@ function Index() {
         </div>
 
         <div id="top" className="relative z-10 mt-5 lg:mt-7">
-          <div className="relative min-h-[22rem] overflow-hidden border border-border bg-secondary sm:min-h-[27rem] lg:min-h-[31rem]">
+          <div className="relative min-h-[22rem] overflow-hidden border border-border bg-secondary sm:min-h-[28rem] lg:min-h-[36rem] xl:min-h-[42rem]">
             <img
               src={heroImage}
               alt="Фиолетовая стеклянная форма вокруг ноутбука — визуальная метафора творческой разработки"
@@ -247,7 +247,7 @@ function Index() {
       <section
         id="featured-projects"
         aria-labelledby="featured-title"
-        className="relative mx-auto mt-6 max-w-[1440px] border border-border bg-card p-5 sm:p-7 lg:mt-8 lg:p-10"
+        className="section-shell relative mx-auto mt-12 max-w-[1600px] border border-border bg-card p-5 sm:p-7 lg:mt-20 lg:p-12"
       >
         <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
@@ -264,7 +264,7 @@ function Index() {
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+        <div className="grid gap-6 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-7">
           {projects.map(({ id, title, description, tags, icon: Icon }) => (
             <article
               key={id}
@@ -302,7 +302,7 @@ function Index() {
       <section
         id="services"
         aria-labelledby="services-title"
-        className="relative mx-auto mt-6 max-w-[1440px] border border-border bg-card p-5 sm:p-7 lg:mt-8 lg:p-10"
+        className="section-shell relative mx-auto mt-12 max-w-[1600px] border border-border bg-card p-5 sm:p-7 lg:mt-20 lg:p-12"
       >
         <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
@@ -319,7 +319,7 @@ function Index() {
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4 lg:gap-5">
+        <div className="grid gap-6 sm:grid-cols-2 sm:gap-5 lg:grid-cols-2 xl:grid-cols-4 lg:gap-7">
           {services.map(({ id, title, description, result, icon: Icon }) => (
             <article
               key={id}
@@ -347,7 +347,7 @@ function Index() {
       <section
         id="process"
         aria-labelledby="process-title"
-        className="relative mx-auto mt-6 max-w-[1440px] border border-border bg-card p-5 sm:p-7 lg:mt-8 lg:p-10"
+        className="section-shell relative mx-auto mt-12 max-w-[1600px] border border-border bg-card p-5 sm:p-7 lg:mt-20 lg:p-12"
       >
         <div className="mb-8 flex flex-col gap-2 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
           <div>
@@ -382,7 +382,7 @@ function Index() {
       <section
         id="contact"
         aria-labelledby="contact-title"
-        className="relative mx-auto mt-6 max-w-[1440px] border border-border bg-card p-6 text-center sm:p-10 lg:mt-8 lg:p-14"
+        className="section-shell relative mx-auto mt-12 max-w-[1600px] border border-border bg-card p-6 text-center sm:p-10 lg:mt-20 lg:p-14"
       >
         <p className="text-lg font-medium uppercase text-primary">Контакты</p>
         <h2
@@ -396,7 +396,7 @@ function Index() {
         </p>
 
         <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Button asChild size="lg" className="h-12 w-full rounded-full px-7 text-lg shadow-none sm:w-auto">
+          <Button asChild size="lg" className="h-14 w-full rounded-full px-8 text-xl shadow-none sm:w-auto sm:text-lg">
             <a href="https://t.me/vibecoder" target="_blank" rel="noopener noreferrer">
               <Send className="size-5" aria-hidden="true" /> Написать в Telegram
             </a>
@@ -405,7 +405,7 @@ function Index() {
             asChild
             size="lg"
             variant="outline"
-            className="h-12 w-full rounded-full px-7 text-lg shadow-none sm:w-auto"
+            className="h-14 w-full rounded-full px-8 text-xl shadow-none sm:w-auto sm:text-lg"
           >
             <a href="mailto:hello@vibecoder.dev">
               <Mail className="size-5" aria-hidden="true" /> Написать на Email
