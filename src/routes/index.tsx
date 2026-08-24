@@ -14,6 +14,8 @@ import {
   Palette,
   Puzzle,
   Rocket,
+  Send,
+
   Sparkles,
   Timer,
   Zap,
