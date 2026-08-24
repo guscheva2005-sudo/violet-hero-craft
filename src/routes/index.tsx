@@ -212,8 +212,7 @@ function Index() {
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2">
-            <article className="project-tile project-tile-light flex min-h-44 flex-col justify-between border border-border p-5 sm:min-h-56 sm:p-6">
-              <span className="text-lg font-medium">Selected / 01</span>
+            <article className="project-tile project-tile-light flex min-h-44 flex-col justify-end border border-border p-5 sm:min-h-56 sm:p-6">
               <div>
                 <p className="text-lg text-muted-foreground">Продуктовый лендинг</p>
                 <h2 className="font-display text-3xl font-black uppercase leading-none sm:text-5xl">
@@ -221,8 +220,7 @@ function Index() {
                 </h2>
               </div>
             </article>
-            <article className="project-tile project-tile-violet flex min-h-44 flex-col justify-between border border-border p-5 text-primary-foreground sm:min-h-56 sm:p-6">
-              <span className="text-lg font-medium">Selected / 02</span>
+            <article className="project-tile project-tile-violet flex min-h-44 flex-col justify-end border border-border p-5 text-primary-foreground sm:min-h-56 sm:p-6">
               <div>
                 <p className="text-lg opacity-80">AI-сервис</p>
                 <h2 className="font-display text-3xl font-black uppercase leading-none sm:text-5xl">
@@ -231,6 +229,7 @@ function Index() {
               </div>
             </article>
           </div>
+
         </div>
 
         <p className="edge-label edge-label-left absolute left-1 top-1/2 hidden text-lg uppercase text-muted-foreground xl:block">
