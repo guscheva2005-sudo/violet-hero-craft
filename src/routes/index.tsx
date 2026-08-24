@@ -8,7 +8,9 @@ import {
   GraduationCap,
   Layers3,
   LineChart,
+  Mail,
   MousePointer2,
+
   Palette,
   Puzzle,
   Rocket,
