@@ -177,13 +177,19 @@ function Index() {
 
         <div id="top" className="relative z-10 mt-5 lg:mt-7">
           <div className="relative min-h-[22rem] overflow-hidden border border-border bg-secondary sm:min-h-[28rem] lg:min-h-[36rem] xl:min-h-[42rem]">
-            <img
-              src={heroImage}
-              alt="Фиолетовая стеклянная форма вокруг ноутбука — визуальная метафора творческой разработки"
-              width={1536}
-              height={1024}
-              className="absolute inset-0 size-full object-cover object-center"
-            />
+            <picture>
+              <source srcSet={heroImageWebp} type="image/webp" />
+              <img
+                src={heroImage}
+                alt="Фиолетовая стеклянная форма вокруг ноутбука — визуальная метафора творческой разработки"
+                width={1280}
+                height={853}
+                loading="eager"
+                decoding="sync"
+                fetchPriority="high"
+                className="absolute inset-0 size-full object-cover object-center"
+              />
+            </picture>
             <div className="hero-image-wash absolute inset-0" aria-hidden="true" />
 
             <div className="absolute inset-x-0 top-0 flex items-center justify-between border-b border-border/70 px-4 py-3 sm:px-6">
