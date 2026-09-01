@@ -407,7 +407,7 @@ function Index() {
 
         <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Button asChild size="lg" className="h-14 w-full rounded-full px-8 text-xl shadow-none sm:w-auto sm:text-lg">
-            <a href="https://t.me/vibecoder" target="_blank" rel="noopener noreferrer">
+            <a href="https://t.me/polinacharushina" target="_blank" rel="noopener noreferrer">
               <Send className="size-5" aria-hidden="true" /> Написать в Telegram
             </a>
           </Button>
@@ -417,7 +417,7 @@ function Index() {
             variant="outline"
             className="h-14 w-full rounded-full px-8 text-xl shadow-none sm:w-auto sm:text-lg"
           >
-            <a href="mailto:hello@vibecoder.dev">
+            <a href="mailto:polinaguscheva2005@mail.ru">
               <Mail className="size-5" aria-hidden="true" /> Написать на Email
             </a>
           </Button>
