@@ -168,7 +168,7 @@ function Index() {
           <Button
             asChild
             size="lg"
-            className="mt-6 h-14 rounded-full px-8 text-xl shadow-none sm:h-13"
+            className="cta-shadow mt-6 h-14 rounded-full px-8 text-xl sm:h-13"
           >
             <a href="#featured-projects">
               Смотреть работы <ArrowUpRight className="size-5" />
@@ -285,7 +285,7 @@ function Index() {
                 <Icon className="relative z-10 size-14 text-primary drop-shadow-lg transition-transform duration-300 group-hover:scale-110" aria-hidden="true" />
               </div>
               <div className="flex flex-1 flex-col p-5 sm:p-6">
-                <h3 className="font-display text-2xl font-black uppercase leading-none text-foreground sm:text-3xl">
+                <h3 className="font-display text-center text-2xl font-black uppercase leading-none text-foreground sm:text-3xl">
                   {title}
                 </h3>
                 <p className="mt-3 text-lg leading-snug text-muted-foreground">
@@ -404,7 +404,7 @@ function Index() {
         </p>
 
         <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Button asChild size="lg" className="h-14 w-full rounded-full px-8 text-xl shadow-none sm:w-auto sm:text-lg">
+          <Button asChild size="lg" className="cta-shadow h-14 w-full rounded-full px-8 text-xl sm:w-auto sm:text-lg">
             <a href="https://t.me/polinacharushina" target="_blank" rel="noopener noreferrer">
               <Send className="size-5" aria-hidden="true" /> Написать в Telegram
             </a>
@@ -413,7 +413,7 @@ function Index() {
             asChild
             size="lg"
             variant="outline"
-            className="h-14 w-full rounded-full px-8 text-xl shadow-none sm:w-auto sm:text-lg"
+            className="cta-shadow h-14 w-full rounded-full px-8 text-xl sm:w-auto sm:text-lg"
           >
             <a href="mailto:polinaguscheva2005@mail.ru">
               <Mail className="size-5" aria-hidden="true" /> Написать на Email
