@@ -23,6 +23,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/vibecoder-hero.jpg";
+import heroImageWebp from "@/assets/vibecoder-hero.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
