@@ -1,9 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowUpRight,
-  BarChart3,
   Bot,
-  Brain,
   Code2,
   GraduationCap,
   Layers3,
@@ -155,7 +153,7 @@ function Index() {
         </header>
 
         <div className="relative z-10 text-center">
-          <p className="mb-1 text-lg font-medium uppercase text-primary">Портфолио / 2026</p>
+          <p className="mb-1 text-lg font-semibold uppercase tracking-wide text-brand">Портфолио / 2026</p>
           <h1
             id="hero-title"
             className="font-display text-[clamp(3rem,9vw,8.5rem)] font-black uppercase leading-[0.8] text-foreground"
@@ -202,7 +200,7 @@ function Index() {
           </div>
 
 
-          <div className="hero-stamp absolute -right-2 -top-11 z-20 flex size-28 rotate-6 flex-col items-center justify-center rounded-full border-4 border-card bg-primary text-center text-primary-foreground shadow-xl sm:right-7 sm:-top-16 sm:size-36">
+          <div className="hero-stamp absolute -right-2 -top-11 z-20 flex size-28 rotate-6 flex-col items-center justify-center rounded-full border-4 border-card bg-primary text-center text-primary-foreground shadow-2xl ring-2 ring-brand/70 sm:right-7 sm:-top-16 sm:size-36">
             <Sparkles className="mb-1 size-5" aria-hidden="true" />
             <span className="font-display text-lg font-black uppercase leading-none sm:text-xl">Ideas</span>
             <span className="text-lg font-medium">→ live</span>
@@ -261,7 +259,7 @@ function Index() {
       >
         <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-lg font-medium uppercase text-primary">Проекты</p>
+            <p className="text-lg font-semibold uppercase tracking-wide text-brand">Проекты</p>
             <h2
               id="featured-title"
               className="font-display text-4xl font-black uppercase leading-[0.9] text-foreground sm:text-5xl lg:text-6xl"
@@ -316,7 +314,7 @@ function Index() {
       >
         <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-lg font-medium uppercase text-primary">What I do</p>
+            <p className="text-lg font-semibold uppercase tracking-wide text-brand">What I do</p>
             <h2
               id="services-title"
               className="font-display text-4xl font-black uppercase leading-[0.9] text-foreground sm:text-5xl lg:text-6xl"
@@ -333,7 +331,7 @@ function Index() {
           {services.map(({ id, title, description, result, icon: Icon }) => (
             <article
               key={id}
-              className="service-card group flex flex-col p-5 sm:p-6"
+              className="service-card group flex min-w-0 flex-col rounded-xl p-5 sm:p-6"
             >
               <div className="mb-5 flex size-12 items-center justify-center border border-border bg-background/80 text-primary">
                 <Icon className="size-6" aria-hidden="true" />
@@ -361,7 +359,7 @@ function Index() {
       >
         <div className="mb-8 flex flex-col gap-2 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-lg font-medium uppercase text-primary">How I work</p>
+            <p className="text-lg font-semibold uppercase tracking-wide text-brand">How I work</p>
             <h2
               id="process-title"
               className="font-display text-4xl font-black uppercase leading-[0.9] text-foreground sm:text-5xl lg:text-6xl"
@@ -394,7 +392,7 @@ function Index() {
         aria-labelledby="contact-title"
         className="section-shell relative mx-auto mt-12 max-w-[1600px] border border-border bg-card p-6 text-center sm:p-10 lg:mt-20 lg:p-14"
       >
-        <p className="text-lg font-medium uppercase text-primary">Контакты</p>
+        <p className="text-lg font-semibold uppercase tracking-wide text-brand">Контакты</p>
         <h2
           id="contact-title"
           className="mx-auto mt-2 max-w-3xl font-display text-4xl font-black uppercase leading-[0.9] text-foreground sm:text-5xl lg:text-6xl"

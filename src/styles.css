@@ -35,6 +35,7 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
+  --color-brand: var(--brand);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -71,17 +72,18 @@
   --card-foreground: oklch(0.985 0.012 295);
   --popover: oklch(0.275 0.125 298);
   --popover-foreground: oklch(0.985 0.012 295);
-  --primary: oklch(0.67 0.235 291);
+  --primary: oklch(0.575 0.235 292);
+  --brand: oklch(0.88 0.115 292);
   --primary-foreground: oklch(0.985 0.012 295);
   --secondary: oklch(0.94 0.035 294);
   --secondary-foreground: oklch(0.25 0.11 295);
   --muted: oklch(0.35 0.11 295);
-  --muted-foreground: oklch(0.82 0.055 291);
+  --muted-foreground: oklch(0.885 0.045 291);
   --accent: oklch(0.76 0.16 271);
   --accent-foreground: oklch(0.18 0.08 292);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.79 0.08 292 / 38%);
+  --border: oklch(0.83 0.08 292 / 52%);
   --input: oklch(0.79 0.08 292 / 46%);
   --ring: oklch(0.72 0.21 286);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -296,7 +298,9 @@
   font-family: var(--font-display);
   font-size: 1.125rem;
   font-weight: 900;
-  color: var(--primary);
+  color: var(--brand);
+  border-color: color-mix(in oklab, var(--brand) 55%, transparent);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--primary) 22%, transparent);
 }
 
 @media (min-width: 640px) {
