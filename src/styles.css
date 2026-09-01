@@ -68,9 +68,9 @@
   --radius: 0.25rem;
   --background: oklch(0.23 0.105 294);
   --foreground: oklch(0.985 0.012 295);
-  --card: oklch(0.275 0.125 298);
+  --card: oklch(0.32 0.13 320);
   --card-foreground: oklch(0.985 0.012 295);
-  --popover: oklch(0.275 0.125 298);
+  --popover: oklch(0.32 0.13 320);
   --popover-foreground: oklch(0.985 0.012 295);
   --primary: oklch(0.575 0.235 292);
   --brand: oklch(0.88 0.115 292);
@@ -104,9 +104,9 @@
 .dark {
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
+  --card: oklch(0.24 0.10 320);
   --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
+  --popover: oklch(0.24 0.10 320);
   --popover-foreground: oklch(0.984 0.003 247.858);
   --primary: oklch(0.929 0.013 255.508);
   --primary-foreground: oklch(0.208 0.042 265.755);
@@ -146,6 +146,14 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     letter-spacing: 0;
+  }
+}
+
+@utility cta-shadow {
+  box-shadow: 0 10px 28px -8px color-mix(in oklab, var(--primary) 55%, transparent);
+
+  &:hover {
+    box-shadow: 0 14px 36px -10px color-mix(in oklab, var(--primary) 70%, transparent);
   }
 }
 
