@@ -42,7 +42,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "preload", as: "image", href: heroImageWebp, type: "image/webp", fetchpriority: "high" },
+      { rel: "preload", as: "image", href: heroImageWebp, type: "image/webp" },
     ],
   }),
   component: Index,
