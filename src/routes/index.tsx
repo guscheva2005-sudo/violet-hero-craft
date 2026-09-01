@@ -23,6 +23,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/vibecoder-hero.jpg";
+import heroImageWebp from "@/assets/vibecoder-hero.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -39,6 +40,9 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "preload", as: "image", href: heroImageWebp, type: "image/webp" },
     ],
   }),
   component: Index,
@@ -176,13 +180,19 @@ function Index() {
 
         <div id="top" className="relative z-10 mt-5 lg:mt-7">
           <div className="relative min-h-[22rem] overflow-hidden border border-border bg-secondary sm:min-h-[28rem] lg:min-h-[36rem] xl:min-h-[42rem]">
-            <img
-              src={heroImage}
-              alt="Фиолетовая стеклянная форма вокруг ноутбука — визуальная метафора творческой разработки"
-              width={1536}
-              height={1024}
-              className="absolute inset-0 size-full object-cover object-center"
-            />
+            <picture>
+              <source srcSet={heroImageWebp} type="image/webp" />
+              <img
+                src={heroImage}
+                alt="Фиолетовая стеклянная форма вокруг ноутбука — визуальная метафора творческой разработки"
+                width={1280}
+                height={853}
+                loading="eager"
+                decoding="sync"
+                fetchPriority="high"
+                className="absolute inset-0 size-full object-cover object-center"
+              />
+            </picture>
             <div className="hero-image-wash absolute inset-0" aria-hidden="true" />
 
             <div className="absolute inset-x-0 top-0 flex items-center justify-between border-b border-border/70 px-4 py-3 sm:px-6">
@@ -397,7 +407,7 @@ function Index() {
 
         <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Button asChild size="lg" className="h-14 w-full rounded-full px-8 text-xl shadow-none sm:w-auto sm:text-lg">
-            <a href="https://t.me/vibecoder" target="_blank" rel="noopener noreferrer">
+            <a href="https://t.me/polinacharushina" target="_blank" rel="noopener noreferrer">
               <Send className="size-5" aria-hidden="true" /> Написать в Telegram
             </a>
           </Button>
@@ -407,7 +417,7 @@ function Index() {
             variant="outline"
             className="h-14 w-full rounded-full px-8 text-xl shadow-none sm:w-auto sm:text-lg"
           >
-            <a href="mailto:hello@vibecoder.dev">
+            <a href="mailto:polinaguscheva2005@mail.ru">
               <Mail className="size-5" aria-hidden="true" /> Написать на Email
             </a>
           </Button>
